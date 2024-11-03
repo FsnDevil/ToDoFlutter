@@ -12,6 +12,7 @@ class AddTodoScreen extends StatefulWidget {
 
 class _AddTodoScreenState extends State<AddTodoScreen> {
   TextEditingController textEditingController = TextEditingController();
+  TextEditingController textEditingControllerDesc = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +45,16 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
                     border: OutlineInputBorder(
                         borderSide:
                             const BorderSide(width: 1, color: Colors.black),
+                        borderRadius: BorderRadius.circular(10))),
+              ),
+              const SizedBox(height: 20,),
+              TextField(
+                controller: textEditingControllerDesc,
+                decoration: InputDecoration(
+                    hintText: 'Enter your todo item description',
+                    border: OutlineInputBorder(
+                        borderSide:
+                        const BorderSide(width: 1, color: Colors.black),
                         borderRadius: BorderRadius.circular(10))),
               ),
               const SizedBox(
